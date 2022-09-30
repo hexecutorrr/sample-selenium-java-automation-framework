@@ -1,0 +1,9 @@
+2022-09-30 14:49:22 INFO  Log:11 - =====================================createNewAccountTest TEST START=========================================
+2022-09-30 14:49:22 INFO  Log:24 - User is going to click on SingIn button
+2022-09-30 14:49:25 INFO  Log:24 - Enter email
+2022-09-30 14:49:25 INFO  Log:24 - Enter other parameters
+2022-09-30 14:49:46 INFO  Log:11 - =====================================verifyCreateAccountPageTest TEST START=========================================
+2022-09-30 14:49:46 INFO  Log:24 - User is going to click on SingIn button
+2022-09-30 14:49:50 INFO  Log:24 - Enter email and password
+2022-09-30 14:49:51 INFO  Log:24 - Verifying correct login and open createAccountPage
+2022-09-30 14:49:55 INFO  Log:16 - =====================================verifyCreateAccountPageTest TEST END=========================================

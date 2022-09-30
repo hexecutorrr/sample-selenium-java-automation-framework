@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="Chrome"/>
+  <listeners>
+    <listener class-name="com.javaautomation.utilities.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="Test_ALL(failed)">
+    <classes>
+      <class name="com.javaautomation.testcases.CreateAccountPageTest">
+        <methods>
+          <include name="loadConfig"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="createNewAccountTest" invocation-numbers="0"/>
+          <include name="afterSuite"/>
+        </methods>
+      </class> <!-- com.javaautomation.testcases.CreateAccountPageTest -->
+    </classes>
+  </test> <!-- Test_ALL(failed) -->
+</suite> <!-- Failed suite [Suite] -->

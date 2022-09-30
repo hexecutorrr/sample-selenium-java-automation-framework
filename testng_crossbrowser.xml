@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="CrossBrowser" parallel="tests">
+	<listeners>
+		<listener class-name="com.javaautomation.utilities.Listeners"></listener>
+	</listeners>
+	<test name="Test_Chrome">
+		<parameter name="browser" value="Chrome"></parameter>
+		<classes>
+			<class name="com.javaautomation.testcases.MainPageTest" />
+		</classes>
+	</test> <!-- Test -->
+	<test name="Test_Edge">
+		<parameter name="browser" value="Edge"></parameter>
+		<classes>
+			<class name="com.javaautomation.testcases.MainPageTest" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

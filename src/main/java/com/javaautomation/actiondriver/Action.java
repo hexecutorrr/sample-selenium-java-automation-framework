@@ -104,9 +104,9 @@ public class Action extends BaseDriver {
 		}
 		
 		// This new path for jenkins
-//		String newPath = "http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/" + filename + "_"
-//				+ date + ".png";
-		return path;
+		String newPath = "http://localhost:9090/job/selenium-java-automation-github/ws/Screenshots/" + filename + "_"
+				+ date + ".png";
+		return newPath;
 	}
 	
 	public static String getCurrentTime() {

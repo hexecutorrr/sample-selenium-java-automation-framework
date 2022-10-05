@@ -87,7 +87,10 @@ public class BaseDriver {
 		getDriver().manage().window().maximize();
 		Action.implicitWait(getDriver(), 10);
 		Action.pageLoadTimeout(getDriver(), 30);
-		getDriver().get(prop.getProperty("url"));
+		//Select url from config file
+//		getDriver().get(prop.getProperty("url"));
+		//Select url from pom.xml
+		getDriver().get(System.getProperty("appURL"));
 
 	}
 

@@ -104,6 +104,7 @@
 					</suiteXmlFiles>
 					<systemPropertyVariables>
 						<appURL>${url}</appURL>
+						<buildDirectory>${project.build.directory}</buildDirectory>
 					</systemPropertyVariables>
 				</configuration>
 			</plugin>

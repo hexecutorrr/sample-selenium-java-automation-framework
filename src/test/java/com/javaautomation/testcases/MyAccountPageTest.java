@@ -38,7 +38,7 @@ public class MyAccountPageTest extends BaseDriver{
 		loginPage = mainPage.clickSingInBtn();
 		//myAccountPage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 		Log.info("Enter login and password");
-		myAccountPage = loginPage.login(username, password);
+		myAccountPage = loginPage.login(username, password, myAccountPage);
 		Log.info("Click SingIn and verify myVishlist");
 		boolean result = myAccountPage.checkMyWishlist();
 		Assert.assertTrue(result);
@@ -53,7 +53,7 @@ public class MyAccountPageTest extends BaseDriver{
 		loginPage = mainPage.clickSingInBtn();
 		//myAccountPage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 		Log.info("Click SingIn and verify myVishlist");
-		myAccountPage = loginPage.login(username, password);
+		myAccountPage = loginPage.login(username, password, myAccountPage);
 		boolean result = myAccountPage.checkOrderHistoryDetails();
 		Assert.assertTrue(result);
 		Log.endTestCase("orderHistoryDetailsTest");

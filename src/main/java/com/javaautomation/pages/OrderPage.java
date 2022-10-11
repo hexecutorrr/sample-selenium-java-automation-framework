@@ -10,13 +10,13 @@ public class OrderPage extends BaseDriver{
 	
 	//Locators
 	@FindBy(xpath="//span[starts-with(@id,'product_price')]")
-	WebElement unitPrice;
+	private WebElement unitPrice;
 	@FindBy(xpath="//span[@id='total_price']")
-	WebElement totalPrice;
+	private WebElement totalPrice;
 	@FindBy(xpath="//input[starts-with(@name,'quantity')]")
-	WebElement quantity;
+	private WebElement quantity;
 	@FindBy(xpath="//a[@class='button btn btn-default standard-checkout button-medium']")
-	WebElement checkoutBtn;
+	private WebElement checkoutBtn;
 	
 	public OrderPage(){
 		PageFactory.initElements(getDriver(), this);

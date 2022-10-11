@@ -10,7 +10,7 @@ public class OrderSummaryPage extends BaseDriver {
 	
 	//Locators
 	@FindBy(xpath="//span[normalize-space()='I confirm my order']")
-	WebElement confirmOrderBtn;
+	private WebElement confirmOrderBtn;
 	
 	public OrderSummaryPage(){
 		PageFactory.initElements(getDriver(), this);

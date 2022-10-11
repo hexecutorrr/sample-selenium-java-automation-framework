@@ -10,32 +10,34 @@ public class LoginPage extends BaseDriver{
 	
 	//Locators
 	@FindBy(xpath="//input[@id='email']")
-	WebElement emailField;
+	private WebElement emailField;
 	@FindBy(xpath="//input[@id='passwd']")
-	WebElement passwordField;
+	private WebElement passwordField;
 	@FindBy(xpath="//button[@id='SubmitLogin']")
-	WebElement singInBtn;
+	private WebElement singInBtn;
 	@FindBy(xpath="//input[@id='email_create']")
-	WebElement createEmailField;
+	private WebElement createEmailField;
 	@FindBy(xpath="//button[@id='SubmitCreate']")
-	WebElement createAccountBtn;
+	private WebElement createAccountBtn;
 	
 	public LoginPage(){
 		PageFactory.initElements(getDriver(), this);
 	}
 	
-	public MyAccountPage login(String email, String password) {
+	public MyAccountPage login(String email, String password, MyAccountPage myAccountPage) {
 		emailField.sendKeys(email);
 		passwordField.sendKeys(password);
 		singInBtn.click();
-		return new MyAccountPage();
+		myAccountPage = new MyAccountPage();
+		return myAccountPage;
 	}
 	
-	public AdressPage login1(String email, String password) {
+	public AddressPage login(String email, String password, AddressPage addressPage) {
 		emailField.sendKeys(email);
 		passwordField.sendKeys(password);
 		singInBtn.click();
-		return new AdressPage();
+		addressPage = new AddressPage();
+		return addressPage;
 	}
 	
 	public CreateAccountPage createAccount(String email) {

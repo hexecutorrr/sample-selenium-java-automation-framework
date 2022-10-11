@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import com.javaautomation.base.BaseDriver;
 import com.javaautomation.dataprovider.DataProviders;
-import com.javaautomation.pages.AdressPage;
+import com.javaautomation.pages.AddressPage;
 import com.javaautomation.pages.LoginPage;
 import com.javaautomation.pages.MainPage;
 import com.javaautomation.pages.OrderConfirmationPage;
@@ -27,7 +27,7 @@ public class BuyProductTest extends BaseDriver {
 	private ProductPage productPage;
 	private OrderPage orderPage;
 	private LoginPage loginPage;
-	private AdressPage adressPage;
+	private AddressPage addressPage;
 	private ShippingPage shippingPage;
 	private PaymentPage paymentPage;
 	private OrderSummaryPage orderSummaryPage;
@@ -62,9 +62,9 @@ public class BuyProductTest extends BaseDriver {
 		Log.info("Click Checkout button");
 		loginPage = orderPage.clickCheckoutBtn();
 		Log.info("Enter login and password");
-		adressPage = loginPage.login1(prop.getProperty("username"), prop.getProperty("password"));
+		addressPage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"), addressPage);
 		Log.info("Click Checkout button");
-		shippingPage = adressPage.clickcheckoutBtn();
+		shippingPage = addressPage.clickcheckoutBtn();
 		Log.info("Select checkBox and click ProcessToCheckout");
 		shippingPage.clickTermsCheckbox();
 		paymentPage = shippingPage.clickProcessToCheckout();

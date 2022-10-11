@@ -9,15 +9,17 @@ import com.javaautomation.base.BaseDriver;
 
 public class MainPage extends BaseDriver{
 	
+	Action action = new Action();
+	
 	//Locators
 	@FindBy(xpath="//a[normalize-space()='Sign in']")
-	WebElement singInBtn;
+	private WebElement singInBtn;
 	@FindBy(xpath="//img[@alt='My Store']")
-	WebElement myStoreLogo;
+	private WebElement myStoreLogo;
 	@FindBy(xpath="//input[@id='search_query_top']")
-	WebElement searchProductField;
+	private WebElement searchProductField;
 	@FindBy(xpath="//button[@name='submit_search']")
-	WebElement searchBtn;
+	private WebElement searchBtn;
 	
 	public MainPage() {
 		PageFactory.initElements(getDriver(), this);
@@ -29,7 +31,7 @@ public class MainPage extends BaseDriver{
 	}
 	
 	public boolean checkLogo() {
-		return Action.isDisplayed(getDriver(), myStoreLogo);
+		return action.isDisplayed(getDriver(), myStoreLogo);
 	}
 	
 	public String getMainPageTitle() {

@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Properties;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.core.LoggerContext;
@@ -12,14 +13,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
-
-import com.javaautomation.actiondriver.Action;
 import com.javaautomation.utilities.ExtentManager;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseDriver {
-
+    
 	public static Properties prop;
 	// public static WebDriver driver;
 
@@ -85,12 +84,13 @@ public class BaseDriver {
 			driver.set(new EdgeDriver());
 		}
 		getDriver().manage().window().maximize();
-		Action.implicitWait(getDriver(), 10);
-		Action.pageLoadTimeout(getDriver(), 30);
+		getDriver().manage().deleteAllCookies();
+		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(Integer.parseInt(prop.getProperty("implicitWait"))));
+		getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(Integer.parseInt(prop.getProperty("pageLoadTimeout"))));
 		//Select url from config file
-//		getDriver().get(prop.getProperty("url"));
+		getDriver().get(prop.getProperty("url"));
 		//Select url from pom.xml
-		getDriver().get(System.getProperty("appURL"));
+//		getDriver().get(System.getProperty("appURL"));
 
 	}
 

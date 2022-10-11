@@ -10,7 +10,7 @@ public class OrderConfirmationPage extends BaseDriver{
 	
 	//Locators
 	@FindBy(xpath="//strong[normalize-space()='Your order on My Store is complete.']")
-	WebElement confirmMessage;
+	private WebElement confirmMessage;
 	
 	public OrderConfirmationPage(){
 		PageFactory.initElements(getDriver(), this);

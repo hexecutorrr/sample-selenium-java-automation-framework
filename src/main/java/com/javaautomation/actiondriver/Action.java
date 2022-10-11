@@ -16,15 +16,18 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.javaautomation.actioninterface.ActionInterface;
 import com.javaautomation.base.BaseDriver;
 
-public class Action extends BaseDriver {
-
-	public static void implicitWait(WebDriver driver, int time) {
+public class Action extends BaseDriver implements ActionInterface{
+	
+	@Override
+	public void implicitWait(WebDriver driver, int time) {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(time));
 	}
 	
-	public static void fluentWait(WebDriver driver, WebElement element, int time) {
+	@Override
+	public void fluentWait(WebDriver driver, WebElement element, int time) {
 		try {
 			Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(time)).pollingEvery(Duration.ofSeconds(2)).ignoring(Exception.class);
 			wait.until(ExpectedConditions.visibilityOf(element));
@@ -34,16 +37,19 @@ public class Action extends BaseDriver {
 		}
 	}
 	
-	public static void explicitWait(WebDriver driver, WebElement element, int time ) {
+	@Override
+	public void explicitWait(WebDriver driver, WebElement element, int time ) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(time));
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 	
-	public static void pageLoadTimeout(WebDriver driver, int time) {
+	@Override
+	public void pageLoadTimeout(WebDriver driver, int time) {
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(time));
 	}
-
-	public static boolean isDisplayed(WebDriver driver, WebElement elem) {
+    
+	@Override
+	public boolean isDisplayed(WebDriver driver, WebElement elem) {
 		boolean f = false;
 		f = elem.isDisplayed();
 		if (f) {
@@ -54,7 +60,8 @@ public class Action extends BaseDriver {
 		return f;
 	}
 	
-	public static boolean selectByVisibleText(WebElement element, String visibletext) {
+	@Override
+	public boolean selectByVisibleText(WebElement element, String visibletext) {
 		boolean f = false;
 		try {
 			Select s = new Select(element);
@@ -72,7 +79,8 @@ public class Action extends BaseDriver {
 		}
 	}
 	
-	public static boolean selectByValue(WebElement element, String value) {
+	@Override
+	public boolean selectByValue(WebElement element, String value) {
 		boolean f = false;
 		try {
 			Select s = new Select(element);
@@ -90,7 +98,8 @@ public class Action extends BaseDriver {
 		}
 	}
 	
-	public static String takeScreenshot(WebDriver driver, String filename) {
+	@Override
+	public String takeScreenshot(WebDriver driver, String filename) {
 		
 		String date = getCurrentTime();
 		TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
@@ -109,7 +118,8 @@ public class Action extends BaseDriver {
 		return newPath;
 	}
 	
-	public static String getCurrentTime() {
+	@Override
+	public String getCurrentTime() {
 		String currentDate = new SimpleDateFormat("yyyy-MM-dd-hhmmss").format(new Date());
 		return currentDate;
 	}

@@ -5,17 +5,40 @@
   <listeners>
     <listener class-name="com.javaautomation.utilities.Listeners"/>
   </listeners>
-  <test thread-count="5" name="Test_ALL(failed)">
+  <test thread-count="5" name="Test_Regression(failed)">
+    <groups>
+      <run>
+        <include name="Regression"/>
+      </run>
+    </groups>
     <classes>
-      <class name="com.javaautomation.testcases.CreateAccountPageTest">
+      <class name="com.javaautomation.testcases.BuyProductTest">
+        <methods>
+          <include name="loadConfig"/>
+          <include name="endToEndBuyProductTest"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="afterSuite"/>
+        </methods>
+      </class> <!-- com.javaautomation.testcases.BuyProductTest -->
+      <class name="com.javaautomation.testcases.OrderPageTest">
         <methods>
           <include name="loadConfig"/>
           <include name="tearDown"/>
+          <include name="verifyTotalPriceTest"/>
           <include name="setup"/>
-          <include name="createNewAccountTest" invocation-numbers="0"/>
           <include name="afterSuite"/>
         </methods>
-      </class> <!-- com.javaautomation.testcases.CreateAccountPageTest -->
+      </class> <!-- com.javaautomation.testcases.OrderPageTest -->
+      <class name="com.javaautomation.testcases.ProductPageTest">
+        <methods>
+          <include name="loadConfig"/>
+          <include name="addToCartTest"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="afterSuite"/>
+        </methods>
+      </class> <!-- com.javaautomation.testcases.ProductPageTest -->
     </classes>
-  </test> <!-- Test_ALL(failed) -->
+  </test> <!-- Test_Regression(failed) -->
 </suite> <!-- Failed suite [Suite] -->

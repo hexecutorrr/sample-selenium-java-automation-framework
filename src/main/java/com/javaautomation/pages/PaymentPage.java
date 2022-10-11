@@ -10,9 +10,9 @@ public class PaymentPage extends BaseDriver {
 	
 	//Locators
 	@FindBy(xpath="//a[@title='Pay by bank wire']")
-	WebElement payByBank;
+	private WebElement payByBank;
 	@FindBy(xpath="//a[@title='Pay by check.']")
-	WebElement payByCheck;
+	private WebElement payByCheck;
 	
 	public PaymentPage(){
 		PageFactory.initElements(getDriver(), this);

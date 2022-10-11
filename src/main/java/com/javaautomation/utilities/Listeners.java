@@ -12,7 +12,9 @@ import com.javaautomation.actiondriver.Action;
 import com.javaautomation.base.BaseDriver;
 
 public class Listeners extends ExtentManager implements ITestListener {
-
+    
+	Action action = new Action();
+	
 	public void onTestStart(ITestResult result) {
 		test = extent.createTest(result.getName());
 		test.createNode(result.getName());
@@ -32,7 +34,7 @@ public class Listeners extends ExtentManager implements ITestListener {
 			test.log(Status.FAIL, MarkupHelper.createLabel(result.getName() + " - Test Case Failed", ExtentColor.RED));
 			test.log(Status.FAIL,
 					MarkupHelper.createLabel(result.getThrowable() + " - Test Case Failed", ExtentColor.RED));
-			String imgPath = Action.takeScreenshot(BaseDriver.getDriver(), result.getName());
+			String imgPath = action.takeScreenshot(BaseDriver.getDriver(), result.getName());
 			test.fail("Screenshot created!", MediaEntityBuilder.createScreenCaptureFromPath(imgPath).build());
 		}
 	}

@@ -9,15 +9,18 @@ import com.javaautomation.base.BaseDriver;
 
 public class SearchResultPage extends BaseDriver{
 	
+	Action action = new Action();
+	
+	//Locators
 	@FindBy(xpath="//img[@title='Faded Short Sleeve T-shirts']")
-	WebElement productResult;
+	private WebElement productResult;
 	
 	public SearchResultPage() {
 		PageFactory.initElements(getDriver(), this);
 	}
 	
 	public boolean checkFindProduct() {
-		return Action.isDisplayed(getDriver(), productResult);
+		return action.isDisplayed(getDriver(), productResult);
 	}
 	
 	public ProductPage clickFindProduct() {

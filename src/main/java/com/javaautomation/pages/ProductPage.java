@@ -9,17 +9,19 @@ import com.javaautomation.base.BaseDriver;
 
 public class ProductPage extends BaseDriver{
 	
+	Action action = new Action();
+	
 	//Locators
 	@FindBy(xpath="//input[@id='quantity_wanted']")
-	WebElement productQuantity;
+	private WebElement productQuantity;
 	@FindBy(xpath="//select[@id='group_1']")
-	WebElement productSize;
+	private WebElement productSize;
 	@FindBy(xpath="//span[normalize-space()='Add to cart']")
-	WebElement addToCartBtn;
+	private WebElement addToCartBtn;
 	@FindBy(xpath="//h2[normalize-space()='Product successfully added to your shopping cart']")
-	WebElement addToCartMassage;
+	private WebElement addToCartMassage;
 	@FindBy(xpath="//span[normalize-space()='Proceed to checkout']")
-	WebElement checkoutBtn;
+	private WebElement checkoutBtn;
 	
 	public ProductPage(){
 		PageFactory.initElements(getDriver(), this);
@@ -31,7 +33,7 @@ public class ProductPage extends BaseDriver{
 	}
 	
 	public void selectSize(String size) {
-		Action.selectByVisibleText(productSize, size);
+		action.selectByVisibleText(productSize, size);
 	}
 	
 	public void clickOnAddToCart() {
@@ -39,8 +41,8 @@ public class ProductPage extends BaseDriver{
 	}
 	
 	public boolean checkAddToCart() {
-		Action.fluentWait(getDriver(), addToCartMassage, 10);
-		return Action.isDisplayed(getDriver(), addToCartMassage);
+		action.fluentWait(getDriver(), addToCartMassage, 10);
+		return action.isDisplayed(getDriver(), addToCartMassage);
 	}
 	
 	public OrderPage clickCheckout() {

@@ -38,7 +38,7 @@ public class LoginPageTest extends BaseDriver{
 		loginPage = mainPage.clickSingInBtn();
 		Log.info("Enter email and password");
 		//myAccountPage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
-		myAccountPage = loginPage.login(username, password);
+		myAccountPage = loginPage.login(username, password, myAccountPage);
 		String actualUrl = myAccountPage.getCurrentUrl();
 		Log.info("Verifying if user is able to login");
 		Assert.assertEquals(actualUrl, "http://automationpractice.com/index.php?controller=my-account");

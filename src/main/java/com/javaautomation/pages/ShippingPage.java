@@ -10,9 +10,9 @@ public class ShippingPage extends BaseDriver{
 	
 	//Locators
 	@FindBy(xpath="//input[@id='cgv']")
-	WebElement termsCheckbox;
+	private WebElement termsCheckbox;
 	@FindBy(xpath="//button[@name='processCarrier']")
-	WebElement checkoutBtn;
+	private WebElement checkoutBtn;
 	
 	public ShippingPage(){
 		PageFactory.initElements(getDriver(), this);

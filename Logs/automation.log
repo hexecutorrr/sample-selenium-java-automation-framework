@@ -1,31 +1,63 @@
-2022-10-11 18:11:20 INFO  Log:11 - =====================================verifyTotalPriceTest TEST START=========================================
-2022-10-11 18:11:20 INFO  Log:24 - Enter search product: t-shirt
-2022-10-11 18:11:22 INFO  Log:24 - Click find button
-2022-10-11 18:11:24 INFO  Log:24 - Enter quantity: 2
-2022-10-11 18:11:24 INFO  Log:24 - Enter size: M
-2022-10-11 18:11:24 INFO  Log:24 - Click AddToCart button
-2022-10-11 18:11:25 INFO  Log:24 - Click Checkout and open orderPage
-2022-10-11 18:11:29 INFO  Log:24 - Verify total price: total = 35.02, actualTotal = 35.02
-2022-10-11 18:11:29 INFO  Log:16 - =====================================verifyTotalPriceTest TEST END=========================================
-2022-10-11 18:11:35 INFO  Log:11 - =====================================addToCartTest TEST START=========================================
-2022-10-11 18:11:35 INFO  Log:24 - Enter search product: t-shirt
-2022-10-11 18:11:37 INFO  Log:24 - Click find button
-2022-10-11 18:11:39 INFO  Log:24 - Enter quantity: 2
-2022-10-11 18:11:40 INFO  Log:24 - Enter size: M
-2022-10-11 18:11:40 INFO  Log:24 - Click AddToCart button
-2022-10-11 18:11:40 INFO  Log:24 - Check add product to cart
-2022-10-11 18:11:43 INFO  Log:16 - =====================================addToCartTest TEST END=========================================
-2022-10-11 18:11:48 INFO  Log:11 - =====================================endToEndBuyProductTest TEST START=========================================
-2022-10-11 18:11:48 INFO  Log:24 - Search product
-2022-10-11 18:11:54 INFO  Log:24 - Enter quantity
-2022-10-11 18:11:54 INFO  Log:24 - Enter size
-2022-10-11 18:11:54 INFO  Log:24 - Click AddToCart button
-2022-10-11 18:11:54 INFO  Log:24 - Click Checkout button
-2022-10-11 18:11:59 INFO  Log:24 - Click Checkout button
-2022-10-11 18:12:05 INFO  Log:24 - Enter login and password
-2022-10-11 18:12:08 INFO  Log:24 - Click Checkout button
-2022-10-11 18:12:10 INFO  Log:24 - Select checkBox and click ProcessToCheckout
-2022-10-11 18:12:12 INFO  Log:24 - Click PayByBank button
-2022-10-11 18:12:13 INFO  Log:24 - Click ConfirmOrder button
-2022-10-11 18:12:16 INFO  Log:24 - Verify result
-2022-10-11 18:12:16 INFO  Log:16 - =====================================endToEndBuyProductTest TEST END=========================================
+2022-10-12 17:26:26 INFO  Log:11 - =====================================verifyLogoTest TEST START=========================================
+2022-10-12 17:26:26 INFO  Log:16 - =====================================verifyLogoTest TEST END=========================================
+2022-10-12 17:26:33 INFO  Log:11 - =====================================verifyTitleTest TEST START=========================================
+2022-10-12 17:26:33 INFO  Log:16 - =====================================verifyTitleTest TEST END=========================================
+2022-10-12 17:26:40 INFO  Log:11 - =====================================myVishlistTest TEST START=========================================
+2022-10-12 17:26:40 INFO  Log:24 - Click SingIn button
+2022-10-12 17:26:42 INFO  Log:24 - Enter login and password
+2022-10-12 17:26:45 INFO  Log:24 - Click SingIn and verify myVishlist
+2022-10-12 17:26:45 INFO  Log:16 - =====================================myVishlistTest TEST END=========================================
+2022-10-12 17:26:51 INFO  Log:11 - =====================================orderHistoryDetailsTest TEST START=========================================
+2022-10-12 17:26:51 INFO  Log:24 - Click SingIn button
+2022-10-12 17:26:53 INFO  Log:24 - Click SingIn and verify myVishlist
+2022-10-12 17:26:57 INFO  Log:16 - =====================================orderHistoryDetailsTest TEST END=========================================
+2022-10-12 17:27:05 INFO  Log:11 - =====================================verifyTotalPriceTest TEST START=========================================
+2022-10-12 17:27:05 INFO  Log:24 - Enter search product: t-shirt
+2022-10-12 17:27:10 INFO  Log:24 - Click find button
+2022-10-12 17:27:15 INFO  Log:24 - Enter quantity: 2
+2022-10-12 17:27:16 INFO  Log:24 - Enter size: M
+2022-10-12 17:27:16 INFO  Log:24 - Click AddToCart button
+2022-10-12 17:27:16 INFO  Log:24 - Click Checkout and open orderPage
+2022-10-12 17:27:19 INFO  Log:24 - Verify total price: total = 35.02, actualTotal = 35.02
+2022-10-12 17:27:19 INFO  Log:16 - =====================================verifyTotalPriceTest TEST END=========================================
+2022-10-12 17:27:26 INFO  Log:11 - =====================================addToCartTest TEST START=========================================
+2022-10-12 17:27:26 INFO  Log:24 - Enter search product: t-shirt
+2022-10-12 17:27:29 INFO  Log:24 - Click find button
+2022-10-12 17:27:31 INFO  Log:24 - Enter quantity: 2
+2022-10-12 17:27:31 INFO  Log:24 - Enter size: M
+2022-10-12 17:27:32 INFO  Log:24 - Click AddToCart button
+2022-10-12 17:27:32 INFO  Log:24 - Check add product to cart
+2022-10-12 17:27:34 INFO  Log:16 - =====================================addToCartTest TEST END=========================================
+2022-10-12 17:27:40 INFO  Log:11 - =====================================createNewAccountTest TEST START=========================================
+2022-10-12 17:27:40 INFO  Log:24 - User is going to click on SingIn button
+2022-10-12 17:27:41 INFO  Log:24 - Enter email
+2022-10-12 17:27:42 INFO  Log:24 - Enter other parameters
+2022-10-12 17:28:02 INFO  Log:11 - =====================================verifyCreateAccountPageTest TEST START=========================================
+2022-10-12 17:28:02 INFO  Log:24 - User is going to click on SingIn button
+2022-10-12 17:28:07 INFO  Log:24 - Enter email and password
+2022-10-12 17:28:07 INFO  Log:24 - Verifying correct login and open createAccountPage
+2022-10-12 17:28:10 INFO  Log:16 - =====================================verifyCreateAccountPageTest TEST END=========================================
+2022-10-12 17:28:15 INFO  Log:11 - =====================================varifySearchProductTest TEST START=========================================
+2022-10-12 17:28:15 INFO  Log:24 - Enter product name: t-shirt and click find button
+2022-10-12 17:28:21 INFO  Log:24 - Verify search result
+2022-10-12 17:28:22 INFO  Log:16 - =====================================varifySearchProductTest TEST END=========================================
+2022-10-12 17:28:35 INFO  Log:11 - =====================================loginTest TEST START=========================================
+2022-10-12 17:28:35 INFO  Log:24 - User is going to click on SingIn button
+2022-10-12 17:28:42 INFO  Log:24 - Enter email and password
+2022-10-12 17:28:45 INFO  Log:24 - Verifying if user is able to login
+2022-10-12 17:28:45 INFO  Log:24 - Login is success
+2022-10-12 17:28:45 INFO  Log:16 - =====================================loginTest TEST END=========================================
+2022-10-12 17:28:52 INFO  Log:11 - =====================================endToEndBuyProductTest TEST START=========================================
+2022-10-12 17:28:52 INFO  Log:24 - Search product
+2022-10-12 17:29:00 INFO  Log:24 - Enter quantity
+2022-10-12 17:29:00 INFO  Log:24 - Enter size
+2022-10-12 17:29:00 INFO  Log:24 - Click AddToCart button
+2022-10-12 17:29:00 INFO  Log:24 - Click Checkout button
+2022-10-12 17:29:04 INFO  Log:24 - Click Checkout button
+2022-10-12 17:29:06 INFO  Log:24 - Enter login and password
+2022-10-12 17:29:11 INFO  Log:24 - Click Checkout button
+2022-10-12 17:29:15 INFO  Log:24 - Select checkBox and click ProcessToCheckout
+2022-10-12 17:29:19 INFO  Log:24 - Click PayByBank button
+2022-10-12 17:29:22 INFO  Log:24 - Click ConfirmOrder button
+2022-10-12 17:29:27 INFO  Log:24 - Verify result
+2022-10-12 17:29:27 INFO  Log:16 - =====================================endToEndBuyProductTest TEST END=========================================

@@ -87,10 +87,10 @@ public class BaseDriver {
 		getDriver().manage().deleteAllCookies();
 		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(Integer.parseInt(prop.getProperty("implicitWait"))));
 		getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(Integer.parseInt(prop.getProperty("pageLoadTimeout"))));
-		//Select url from config file
-		getDriver().get(prop.getProperty("url"));
-		//Select url from pom.xml
-//		getDriver().get(System.getProperty("appURL"));
+		//Select url from config file. Use when run project in IDE
+//		getDriver().get(prop.getProperty("url"));
+		//Select url from pom.xml. Use when run project in Jenkins.
+		getDriver().get(System.getProperty("appURL"));
 
 	}
 

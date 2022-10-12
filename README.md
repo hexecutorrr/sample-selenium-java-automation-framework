@@ -6,7 +6,7 @@
 * [Setup](#setup)
 
 ## General info
-An example of creating a framework for automating web page testing using Selenium WebDriver and the Java programming language.
+An example of creating a framework for automating web page testing using Selenium WebDriver and the Java programming language. With the possibility of further integration with Jenkins or similar software
 
 ## Technologies
 Project is created with:
@@ -16,6 +16,8 @@ Project is created with:
 * Selenium 4.4.0
 * log4j 2.18.0
 * Webdrivermanager 5.3.0
+* Extent Reports 5.0.9
+* Apache POI 5.2.2
 
 ## Setup
-To run this project, clone repo and configure build in Jenkins.
+To run this project, clone repo and run project in IDE or configure build in Jenkins. Depending on the launch environment, you need to make changes in BaseDriver and Action. 
